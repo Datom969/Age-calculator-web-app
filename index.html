@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="calc.css">
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <main class="container">
+    <form id="myform" novalidate>
+      <div class="box">
+        <label for="label" class="label day">Day</label>
+        <input type="number"  name="date" class="input_day" placeholder="DD">
+        <p class="error_day"></p>
+      </div>
+      <div class="box">
+        <label for="label" class="label mnth">Month</label>
+        <input type="number" name="month" 
+        class="input_month" placeholder="MM">
+        <p class="error_month"></p>
+      </div>
+      <div class="box">
+        <label for="label" class="label yr">Year</label>
+        <input type="number"  name="year" class="input_year" placeholder="YYYY" min="1000">
+        <p class="error_year"></p>
+      </div>
+      <div>
+        <button class="arrow-btn" type="submit">
+          <img src="./assets/images/icon-arrow.svg" alt="button" />
+        </button>
+      </div>
+    </form>
+    <section class="result-section">
+      <p class="result"><span class="result-years">-- </span>years</p>
+      <p class="result"><span class="result-months">-- </span>months</p>
+      <p class="result"><span class="result-days">-- </span>days</p>
+    </section>
+  </main>
+  
+  <script src="calculate.js"></script>
+  
+    <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mustapha Wasiu</a>
+  </footer>
+    </body>
+</html>

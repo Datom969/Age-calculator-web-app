@@ -1,0 +1,177 @@
+@font-face{
+    font-family: Poppins-italic;
+    font-weight: 700;
+    font-style: Italic;
+    src: url('./assets/fonts/Poppins-BoldItalic.ttf');
+}
+@font-face{
+    font-family: "Poppins";
+    font-weight: 700;
+    src: url('./assets/fonts/Poppins-Bold.ttf');    
+}
+@font-face{
+    font-family: "Poppins";
+    font-weight: 800;
+    src: url('./assets/fonts/Poppins-ExtraBold.ttf');
+}
+@font-face{
+    font-family: "Poppins";
+    font-weight: 400;
+    font-style: Italic;
+    src: url('./assets/fonts/Poppins-Italic.ttf');
+}
+@font-face{
+    font-family: "Poppins";
+    font-weight: 400;
+    src: url('./assets/fonts/Poppins-Regular.ttf');
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    font-family: Poppins;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0, 0%, 86%);
+    margin-top: 2rem; 
+    height:100vh;
+}
+
+.container{
+    background-color: hsl(0, 0%, 100%);
+    border-radius:10px 10px 30% 10px;
+    padding: 3rem;
+    width: 60vw; 
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+#myform{
+    display: flex;
+    border-bottom: 2px solid hsl(0, 0%, 94%);
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+input{
+    width: 11vw;
+    height: 4rem;
+    margin-top: 0.5rem;
+    font-size: 22px;
+    font-weight: 700;
+    padding-left: 16px;
+    border: 2px solid hsl(0, 0%, 94%);
+    border-radius: 5px;
+    outline: none;
+    
+}
+input::placeholder{
+    color: hsl(0, 1%, 44%);
+    font-size: 22px;
+}
+
+.label{
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: hsl(0, 1%, 44%);
+}
+
+/*p{
+    color:hsl(0, 100%, 67%);
+}*/
+
+.arrow-btn{
+        position: absolute;
+        right:0;
+        bottom:-35px;
+        border-radius:50%;
+        padding:10px;
+        background-color:hsl(259, 100%, 65%);
+        cursor:pointer;
+        border:none;
+        transition: all 0.3s ease-in-out;
+    }
+    .arrow-btn:hover{
+        background-color: hsl(0, 0%, 8%);
+        transform: scale(0.95);
+    }
+
+    .result {
+        line-height: 3px;
+        font-size: 54px;
+        font-weight: 800;
+        font-family: Poppins-italic;
+        margin-top: 3.5rem;
+    }
+.result-years, .result-months, .result-days{
+    color: hsl(259, 100%, 65%);
+}
+
+.error_day, .error_month, .error_year{
+    color:hsl(0, 100%, 67%);
+    font-style: italic;
+    font-size: 12px;
+}
+
+footer {
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+@media (max-width:768px){
+
+    body{
+        margin:0;
+    }
+    .container{
+        width: 90%;
+        min-height: 70vh;
+        margin: 2rem;
+        padding: 1.5rem;
+        padding-top: 2rem;
+    }
+    input{
+        width: 23vw; 
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    input::placeholder{
+        font-size: 16px;
+    }
+
+    #myform {
+        padding-bottom: 3rem;
+    }
+ 
+    .arrow-btn{
+        right: 38%;
+    }
+    
+    .box{
+     margin-right: 1rem;  
+}
+    .result{
+    line-height: 8px;
+    font-size: 30px;    
+}
+    .result-section{
+    margin-top: 5rem;
+}
+}
+
+    .input_day:invalid {
+    border-color: red ;
+
+}
